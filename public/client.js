@@ -4,7 +4,6 @@ const ctx = canvas.getContext("2d");
 
 canvas.width = 300;
 canvas.height = 300;
-
 let snake = [{ x: 150, y: 150 }];
 let direction = "RIGHT";
 let food = { x: 100, y: 100 };
@@ -57,7 +56,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowRight" && direction !== "LEFT") direction = "RIGHT";
 });
 
-// --- Auth functions ---
+// --- UI / Auth functions ---
 async function register() {
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
@@ -87,6 +86,11 @@ async function login() {
   } else {
     alert(data.error);
   }
+}
+
+function playAsGuest() {
+  document.getElementById("auth").style.display = "none";
+  document.getElementById("menu").style.display = "block";
 }
 
 // --- Game modes ---
