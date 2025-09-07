@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snake Multiplayer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🐍 Snake Multiplayer</h1>
+
+  <div id="auth">
+    <input id="username" placeholder="Username">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="menu" style="display:none;">
+    <button onclick="startSingle()">Play Solo</button>
+    <button onclick="findMatch()">Find Match</button>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
