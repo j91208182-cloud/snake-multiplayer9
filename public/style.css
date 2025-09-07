@@ -1,13 +1,74 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background: #111;
   color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: lime;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+}
+
+/* Container for auth and menu buttons */
+#auth, #menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  min-width: 250px;
+}
+
+input {
+  padding: 12px;
+  font-size: 1em;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: #eee;
+}
+
+input:focus {
+  outline: none;
+  border-color: lime;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #008c16;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #00a61b;
+}
+
+button:active {
+  background-color: #006810;
+  transform: scale(0.98);
 }
 
 canvas {
-  background: #222;
+  background: #000;
   display: block;
   margin: 20px auto;
   border: 2px solid #555;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }
