@@ -1,1 +1,13 @@
-<style.css content from above>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #111;
+  color: #eee;
+}
+
+canvas {
+  background: #222;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid #555;
+}
